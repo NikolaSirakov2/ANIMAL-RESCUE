@@ -49,3 +49,18 @@ footer {
     font-size: 20px;
     font-weight: bolder;
 }
+
+.container {
+    position: relative;
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.card {
+    background-color: rgb(167, 112, 45);
+    width: 180px;
+    margin: 10px;
+}
