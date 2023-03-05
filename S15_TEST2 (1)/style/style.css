@@ -1,0 +1,51 @@
+header {
+    display: flex;
+    height: 10vh;
+    background-color: tomato;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 30px;
+}
+
+header a{
+    margin-right: 50px;
+    color: bisque;
+}
+
+#home {
+    background-color: rgb(60, 162, 128);
+    height: 85vh;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#searchByType {
+    height: 20px;
+    margin: 5px 20px;
+}
+
+#searchByName {
+    height: 15px;
+    margin: 5px 20px;
+}
+
+#adopted {
+    background-color: khaki;
+    height: 85vh;
+}
+
+#user {
+    background-color: burlywood;
+    height: 85vh;
+}
+
+footer {
+    height: 5vh;
+    background-color: rgb(161, 160, 160);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bolder;
+}

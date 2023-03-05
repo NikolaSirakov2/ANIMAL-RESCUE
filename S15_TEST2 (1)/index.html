@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANIMAL RESCUE</title>
+    <link rel="stylesheet" href="./style/reset.css">
+    <link rel="stylesheet" href="./style/style.css">
+    <script src="data.js"></script>
+</head>
+<body>
+    <header>
+        
+        <img width="90" src="./images/logo.png" alt="logo">
+        <a href="#home">home</a>
+        <a href="#adopted">adopted</a>
+        <a href="#user">user</a>
+    </header>
+    <main>
+        <div id="home">
+            <select name="searchByType" id="searchByType">
+                <option value="default">Chose animal type</option>
+                <option value="костенурка">костенурка</option>
+                <option value="котка">котка</option>
+                <option value="видра">видра</option>
+                <option value="куче">куче</option>
+                <option value="ламя">ламя</option>
+                <option value="вълк">вълк</option>
+                <option value="змия">змия</option>
+            </select>
+            <input type="text" id="searchByName" placeholder="Search animal by name:">
+            <div class="container">
+            </div>
+          </div>
+
+        <div id="adopted">
+            <div id="adoptedAnimals">
+            </div>
+        </div>
+
+        <div id="user">
+
+        </div>
+    </main>
+
+    <footer>&copy; Nikola Sirakov 2023</footer>
+    <script src="ViewController.js"></script>
+</body>
+</html>
