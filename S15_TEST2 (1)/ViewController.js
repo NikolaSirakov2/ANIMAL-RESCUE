@@ -72,10 +72,9 @@ class ViewController {
         let result = this.animalsManager.searchByType(e.target.value);
         this.renderAnimalsCard(result, animalsContainer);
       } else if (e.target.value === "default") {
-        let animalsContainer = document.querySelector(
-          "#home .container"
-        );
-        this.renderAnimalsCard(this.animalsManager.recipeList, animalsContainer);
+        searchByName.value = "";
+        let animalsContainer = document.querySelector("#home .container");
+        this.renderAnimalsCard(this.animalsManager.animalsList, animalsContainer);
       }
     });
 
