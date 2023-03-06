@@ -41,7 +41,7 @@ class ViewController {
             card.style.width = "200px";
             card.style.background = "white";
 
-            let photo = createElement("img");
+            let photo = createElement("img");   
             photo.src = `./images/${animal.image}`;
             photo.style.width = "200px";
 
