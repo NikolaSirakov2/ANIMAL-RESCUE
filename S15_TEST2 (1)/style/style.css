@@ -40,6 +40,26 @@ header a{
     height: 85vh;
 }
 
+#donate {
+    background-color: bisque;
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    gap: 10px;
+}
+
+#donoPage {
+    
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+
+}
+
 footer {
     height: 5vh;
     background-color: rgb(161, 160, 160);
@@ -65,3 +85,16 @@ footer {
     height: 320px;
     margin: 10px;
 }
+
+button:hover {
+    background-color: black;
+    color: bisque;
+}
+
+table, th, td {
+    display: relative;
+    border: 1px solid black;
+    text-align: center;
+    justify-content: center;
+  }
+

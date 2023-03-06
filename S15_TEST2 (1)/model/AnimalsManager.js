@@ -23,7 +23,10 @@ class AnimalsManager {
             animal.neededAmount,
             animal.currentlyRisedAmount
         ));
+
     }
+
+    
 
     search = (keyword) => {
 
