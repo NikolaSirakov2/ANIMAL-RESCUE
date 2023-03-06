@@ -62,5 +62,6 @@ footer {
 .card {
     background-color: rgb(167, 112, 45);
     width: 180px;
+    height: 320px;
     margin: 10px;
 }

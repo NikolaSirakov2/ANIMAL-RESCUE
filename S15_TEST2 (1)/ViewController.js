@@ -42,7 +42,7 @@ class ViewController {
             card.style.background = "white";
 
             let photo = createElement("img");
-            photo.src = "http://img.recipepuppy.com/1.jpg";
+            photo.src = `./images/${animal.image}`;
             photo.style.width = "200px";
 
             let name = createElement("div");
@@ -57,7 +57,7 @@ class ViewController {
             let age = createElement("div");
             age.innerText = animal.age;
 
-            card.append (name, family, bread, age);
+            card.append (photo, name, family, bread, age);
 
             container.appendChild(card);
         })
