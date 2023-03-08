@@ -145,6 +145,7 @@ class ViewController {
 
     searchByType.addEventListener("input", (e) => {
       if (e.target.value !== "default") {
+        searchByName.value = "";
         let result = this.animalsManager.searchByType(e.target.value);
         this.renderAnimalsCard(result, animalsContainer);
       } else if (e.target.value === "default") {
@@ -202,7 +203,7 @@ class ViewController {
         donateButt.style.margin = "0 0 50px 0";
         donateButt.addEventListener("click", () => {
             colon1.innerText = `${new Date().toLocaleDateString()} ${new Date().toLocaleTimeString()}`;
-            colon2.innerText = donor.value;
+            colon2.innerText = name;
             colon3.innerText = money.value;
         })
 
@@ -234,6 +235,7 @@ class ViewController {
 
         let row2 = createElement("tr");
         row2.style.height = "70%";
+        row2.style.fontSize = "20px";
 
         let colon1 = createElement("td");
         colon1.innerText = "";
