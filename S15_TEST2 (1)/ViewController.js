@@ -75,6 +75,7 @@ class ViewController {
                 card.style.display = "none";
                 let index = animalsList.indexOf(animal);
                 animalsList.splice(index, 1);
+                localStorage.setItem('animalsList', JSON.stringify(animalsList));
             });
 
             
@@ -132,6 +133,7 @@ class ViewController {
             leaveButton.innerText = "Leave";
             leaveButton.addEventListener("click", () => {
                 this.animalsManager.animalsList.push(animal);
+                localStorage.setItem('animalsList', JSON.stringify(this.animalsManager.animalsList));
                 card.style.display = "none";
                 let index = adoptedList.indexOf(animal);
                 adoptedList.splice(index, 1);

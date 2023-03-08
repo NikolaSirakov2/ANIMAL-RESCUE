@@ -13,7 +13,7 @@ class Animal {
 
 class AnimalsManager {
     constructor(){
-        this.animalsList = DATA.map(animal => new Animal(
+        this.animalsList = JSON.parse(localStorage.getItem("animalsList"))|| DATA.map(animal => new Animal(
             animal.name,
             animal.image,
             animal.type,
