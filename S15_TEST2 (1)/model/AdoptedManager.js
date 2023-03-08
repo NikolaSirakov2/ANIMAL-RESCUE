@@ -9,12 +9,10 @@ class AdoptedAnimal {
 }
 
 class AdoptedManager {
-  adoptedList = [];
+  adoptedList = JSON.parse(localStorage.getItem("adoptedList")) || [];
 
   addToAdopted = (animal) => {
-    if (this.adoptedList.includes(animal.name)) {
-      console.log("test");
-    } else {
+    
       this.adoptedList.push(
         new AdoptedAnimal(
           animal.image,
@@ -24,6 +22,7 @@ class AdoptedManager {
           animal.age
         )
       );
-    }
+    
+      localStorage.setItem('adoptedList', JSON.stringify(this.adoptedList));
   };
 }
