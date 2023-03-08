@@ -27,11 +27,12 @@ class UserManager {
         if(existingUser.length > 0){
             this.logedUser = existingUser;
             localStorage.setItem('loged', JSON.stringify(this.logedUser));
+            
         }
     }
 
     logOut = () => {
-        localStorage.removeItem("usersList"[0]);
+        localStorage.removeItem("loged");
     }
 
     createUser = (name, pass, confirm) => {

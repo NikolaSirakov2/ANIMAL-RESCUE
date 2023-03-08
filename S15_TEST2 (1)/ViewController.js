@@ -135,6 +135,7 @@ class ViewController {
                 card.style.display = "none";
                 let index = adoptedList.indexOf(animal);
                 adoptedList.splice(index, 1);
+                localStorage.setItem('adoptedList', JSON.stringify(adoptedList));
             });
 
             card.append (photo, name, family, bread, age, date, leaveButton);
