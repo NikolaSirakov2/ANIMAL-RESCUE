@@ -38,6 +38,8 @@ header a{
 #user {
     background-color: burlywood;
     height: 85vh;
+    display: flex;
+    flex-direction: column;
 }
 
 #donate {
@@ -98,3 +100,25 @@ table, th, td {
     justify-content: center;
   }
 
+  #login {
+    height: 30vh;
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#register {
+    height: 30vh;
+    background-color: rgb(129, 173, 206);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}

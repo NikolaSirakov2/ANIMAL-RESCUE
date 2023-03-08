@@ -5,6 +5,7 @@ class ViewController {
         this.animalsManager = new AnimalsManager();
         this.adoptedManager = new AdoptedManager();
         this.donateManager = new DonateManager();
+        this.userManager = new UserManager();
     }
 
     handleHashChange = () => {
@@ -30,6 +31,9 @@ class ViewController {
                 break;
             case 'adopted':
                 this.renderAdoptedPage();
+                break;
+            case 'user':
+                this.renderUserPage();
                 break;
         }
     }
@@ -179,6 +183,7 @@ class ViewController {
 
         let page = document.createElement("div");
         page.id = "donoPage";
+        
 
         let header = createElement("h1");
         header.innerText = `How much do you want to donate for ${name}?`;
@@ -211,7 +216,7 @@ class ViewController {
         historyTitle.innerText = "Donations history";
 
         let table = createElement("table");
-        table.style.width = "90%";
+        table.style.width = "100%";
         table.style.border = "2px";
         table.style.height = "30%";
 
@@ -235,7 +240,7 @@ class ViewController {
 
         let row2 = createElement("tr");
         row2.style.height = "70%";
-        row2.style.fontSize = "20px";
+        row2.style.fontSize = "15px";
 
         let colon1 = createElement("td");
         colon1.innerText = "";
@@ -254,6 +259,34 @@ class ViewController {
         page.append(header, donor, money, donateButt, historyTitle, table);
 
         container.appendChild(page);
+    }
+
+    renderUserPage = () => {
+        let register = document.getElementById('registerForm');
+
+        register.onsubmit = (e) => {
+            e.preventDefault();
+            let username = e.target.elements.username.value.trim();
+            let pass = e.target.elements.pass.value.trim();
+            let confirm = e.target.elements.confirm.value.trim();
+
+            this.userManager.createUser(username, pass, confirm);
+            
+        }
+
+        let form = document.getElementById('loginForm');
+
+        form.onsubmit = (e) => {
+            e.preventDefault();
+            let username = e.target.elements.username.value.trim();
+            let pass = e.target.elements.pass.value.trim();
+            
+            this.userManager.logIn(username, pass);
+        }
+
+        let logOut = document.getElementById('logoutButt');
+
+        logOut.addEventListener('click', this.userManager.logOut);
     }
 }
 
