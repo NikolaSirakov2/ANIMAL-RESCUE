@@ -15,6 +15,15 @@ class ViewController {
 
         let pageIds = ["home", "adopted", "user", "donate"];
 
+        
+            if(hash === "home" || hash === "adopted"){
+                if(this.userManager.logedUser === null){
+                    location.hash = "user";
+                    console.log(hash);
+                }
+            }
+        
+
         pageIds.forEach(id => {
             let page = document.getElementById(id);
 

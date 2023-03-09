@@ -7,7 +7,7 @@ class User {
 
 class UserManager {
         constructor() {
-            let logedUser = JSON.parse(localStorage.getItem("loged"));
+            let logedUser = JSON.parse(localStorage.getItem("loged")) || null;
             if(logedUser){
                 this.logedUser = new User(logedUser.name, logedUser.pass);
             }
@@ -27,8 +27,10 @@ class UserManager {
         if(existingUser.length > 0){
             this.logedUser = existingUser;
             localStorage.setItem('loged', JSON.stringify(this.logedUser));
-            
+            return true;
         }
+
+        return false;
     }
 
     logOut = () => {
@@ -44,6 +46,5 @@ class UserManager {
             localStorage.setItem('usersList', JSON.stringify(this.usersList));
         }
 
-        console.log(this.usersList);
     }
 }

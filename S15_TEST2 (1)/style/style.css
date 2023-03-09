@@ -14,25 +14,29 @@ header a{
 }
 
 #home {
-    background-color: rgb(60, 162, 128);
+    background-color: bisque;
     height: 85vh;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    overflow: auto;
 }
 
 #searchByType {
     height: 20px;
-    margin: 5px 20px;
+    width: 250px;
+    margin: 5px 10px;
 }
 
 #searchByName {
     height: 15px;
-    margin: 5px 20px;
+    width: 242px;
+    margin: 5px 10px;
 }
 
 #adopted {
     background-color: khaki;
     height: 85vh;
+    overflow: auto;
 }
 
 #user {
@@ -76,6 +80,7 @@ footer {
     position: relative;
     
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 10px;
